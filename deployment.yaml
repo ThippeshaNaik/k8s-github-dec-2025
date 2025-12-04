@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: deployment
+kind: Deployment
 metadata:
   name: nginx-deployment
   labels:
@@ -9,14 +9,14 @@ spec:
   selector:
     matchLabels:
       apps: hello
-  templete:
+  template:
     metadata:
       labels:
-        apps:hello
+        apps: hello
     spec:
       containers:
-        - name:
-          image:
+        - name: my- container
+          image: nginx
           ports:
             - containerPort: 80
 
